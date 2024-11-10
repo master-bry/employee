@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+       <ImageView
+           android:layout_width="326dp"
+           android:layout_height="228dp"
+           android:layout_gravity="center"
+           android:layout_marginTop="50dp"
+           android:src="@drawable/logo"
+           android:contentDescription="@string/bluehost" />
+       
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="22sp"
+           android:text="@string/customer_login"
+           android:fontFamily="sans-serif-condensed"
+           android:textStyle="bold"
+           android:layout_gravity="center"/>
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:id="@+id/username"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_height="wrap_content">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:maxLength="50"
+               android:maxLines="1"
+               android:hint="@string/username" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.textfield.TextInputLayout
+           android:layout_width="match_parent"
+           android:id="@+id/password"
+           android:layout_marginLeft="30dp"
+           android:layout_marginRight="30dp"
+           app:passwordToggleEnabled="true"
+           style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+           android:layout_height="wrap_content">
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:maxLength="30"
+           android:inputType="textPassword"
+           android:maxLines="1"
+
+           android:hint="@string/password" />
+   </com.google.android.material.textfield.TextInputLayout>
+       
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="30dp"
+           android:backgroundTint="#BBC1E1"
+           android:layout_marginLeft="30dp"
+           android:id="@+id/button_login"
+           android:text="@string/login"/>
+
+
+   </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
